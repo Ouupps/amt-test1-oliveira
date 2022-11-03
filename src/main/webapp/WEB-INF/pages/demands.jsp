@@ -9,7 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
     <head>
-        <title>Mes demandes ${nameDepot}</title>
+        <title>Mes demandes ${depotName}</title>
     </head>
     <body>
         <c:if test="${products != null}">
@@ -25,7 +25,7 @@
             <label for="nameProduct">Nom du produit:</label><br>
             <input type="text" id="nameProduct" name="nameProduct"><br>
             <label for="demands">Quantité demandé:</label><br>
-            <input type="text" id="demands" name="demands" value="${demands}"><br><br>
+            <input type="text" id="demands" name="demands" value="${demandMake}"><br><br>
             <input type="submit" value="demande">
         </form>
 
