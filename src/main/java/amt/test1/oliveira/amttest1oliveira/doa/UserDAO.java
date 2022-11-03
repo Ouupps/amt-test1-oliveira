@@ -15,7 +15,7 @@ import java.util.List;
 @Stateless
 public class UserDAO implements UserDAOLocal, UserDAORemote {
 
-    @Resource(lookup = "java:AppDB")
+    @Resource(name = "jdbc/AMTtest1DS")
     private DataSource dataSource;
 
     public boolean createTable(){

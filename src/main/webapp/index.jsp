@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>JSP - Hello World</title>
+        <title>Test n° 1</title>
     </head>
     <body>
         <form action="${pageContext.request.contextPath}/" method="post">
@@ -24,6 +24,15 @@
             <c:forEach items="${users}" var="user">
                 <p>${user.firstname} ${user.lastname}</p>
             </c:forEach>
+        </c:if>
+
+        <c:if test="${errors != null}">
+            Erreurs:
+            <ul>
+                <c:forEach items="${errors}" var="error">
+                    <li>${error}</li>
+                </c:forEach>
+            </ul>
         </c:if>
     </body>
 </html>

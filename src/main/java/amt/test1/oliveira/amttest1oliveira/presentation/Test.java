@@ -4,6 +4,7 @@ import amt.test1.oliveira.amttest1oliveira.buisness.User;
 import amt.test1.oliveira.amttest1oliveira.doa.UserDAOLocal;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 import javax.inject.Inject;
 import javax.servlet.ServletException;
@@ -37,6 +38,9 @@ public class Test extends HttpServlet {
         newUser.setLastname(lName);
         userDAO.insert(newUser);
         request.setAttribute("nameUser", lName + " " + fName );
+
+        List<String> errors = new ArrayList<>();
+        request.setAttribute("errors", errors);
         request.getRequestDispatcher("/index.jsp").forward(request, response);
     }
 
