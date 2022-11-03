@@ -16,7 +16,7 @@
             Les dépôts:
             <ul>
                 <c:forEach items="${depots}" var="depot">
-                    <li>${depot.name} <a href="demands?depotName=${depot.name}&id=${depot.id}">Mes demandes</a> <a href="other"> Autres demandes</a></li>
+                    <li>${depot.name} <a href="demands?depotName=${depot.name}&id=${depot.id}">Mes demandes</a> <a href="other?depotName=${depot.name}&id=${depot.id}"> Autres demandes</a></li>
                 </c:forEach>
             </ul>
         </c:if>

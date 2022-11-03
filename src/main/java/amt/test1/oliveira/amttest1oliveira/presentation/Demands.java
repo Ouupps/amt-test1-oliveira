@@ -63,16 +63,16 @@ public class Demands extends HttpServlet {
         if(idProduct == 0){
             errors.add("produit introuvable");
         }
-        if(errors.size() != 0){
 
+        if(errors.size() != 0){
             request.setAttribute("errors", errors);
             request.getRequestDispatcher("/WEB-INF/pages/demands.jsp").forward(request, response);
         }
         else {
-            demandDAO.insertDemand(IdDepot, idProduct);
+            demandDAO.insertDemand(IdDepot, idProduct, demand);
             request.setAttribute("demandMake", demand);
             request.getRequestDispatcher("/WEB-INF/pages/demands.jsp").forward(request, response);
-        }    
+        }
 
     }
 }

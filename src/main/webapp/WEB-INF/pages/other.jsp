@@ -11,11 +11,11 @@
         <title>Autres demandes ${depotName}</title>
     </head>
     <body>
-        <c:if test="${products != null}">
+        <c:if test="${demands != null}">
             Les dépôts:
             <ul>
-                <c:forEach items="${products}" var="product">
-                    <li>${product.name} ${product.stock} ${demands}</li>
+                <c:forEach items="${demands}" var="demand">
+                    <li>${demand.name} ${demand.stock} ${demand}</li>
                 </c:forEach>
             </ul>
         </c:if>
