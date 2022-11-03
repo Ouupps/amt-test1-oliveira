@@ -38,6 +38,6 @@ public class DepotDAO implements DepotDAORemote, DepotDAOLocal{
     }
 
     private Depot instantiate(ResultSet rs) throws SQLException {
-        return new Depot(rs.getString("depName"));
+        return new Depot(rs.getString("depName"), rs.getInt("depNumber"));
     }
 }
