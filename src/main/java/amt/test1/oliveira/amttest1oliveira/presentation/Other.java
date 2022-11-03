@@ -24,7 +24,7 @@ public class Other extends HttpServlet {
         String idDepotString = request.getParameter("id");
         int idDepot = Integer.parseInt(idDepotString);
 
-        List<Demand> demands = demandDAO.getDemand();
+        List<Demand> demands = demandDAO.getDemand(1,1);
 
         request.setAttribute("demands", demands);
 
