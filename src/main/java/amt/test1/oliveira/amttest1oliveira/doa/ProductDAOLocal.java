@@ -7,6 +7,5 @@ import java.util.List;
 
 @Local
 public interface ProductDAOLocal {
-
-    List<Product> getProducts();
+    List<Product> getProductsStock(int isStock);
 }

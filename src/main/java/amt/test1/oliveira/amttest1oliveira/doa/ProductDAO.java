@@ -20,7 +20,7 @@ public class ProductDAO implements ProductDAOLocal, ProductDAORemote {
     private DataSource dataSource;
 
     @Override
-    public List<Product> getProducts(int idDepot, int isStock) {
+    public List<Product> getProductsStock(int isStock) {
         List<Product> list = new ArrayList<>();
         try (Connection connection = dataSource.getConnection()) {
             PreparedStatement stmt = connection.prepareStatement(
@@ -40,13 +40,12 @@ public class ProductDAO implements ProductDAOLocal, ProductDAORemote {
                 );
 
                 stmt.setInt(1, product.getId());
-                stmt.setInt(2, idDepot);
+                stmt.setInt(2, isStock);
 
                 stmt.execute();
                 ResultSet innerRs = stmt.getResultSet();
-                product.se
+                product.setStock(innerRs.getInt("quantite"));
             }
-
 
         } catch (SQLException e) {
             e.printStackTrace();
