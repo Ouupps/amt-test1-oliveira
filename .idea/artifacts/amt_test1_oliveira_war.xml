@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="amt-test1-oliveira:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>amt-test1-oliveira</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="amt-test1-oliveira.war">
+      <element id="artifact" artifact-name="amt-test1-oliveira:war exploded" />
+    </root>
+  </artifact>
+</component>
